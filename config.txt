@@ -1,0 +1,7 @@
+#!/bin/bash
+### Input files
+PE1="sample1.fq.gz"
+PE2="sample2.fq.gz"
+SE=
+### Adapters
+adapters=NexteraPE-PE.fa
