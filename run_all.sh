@@ -21,7 +21,7 @@ rm 02_trim/reads_R?U.fq.gz
 ### Merging reads with bbmerge:38.91
 tPE1=02_trim/reads_R1P.fq.gz
 tPE2=02_trim/reads_R2P.fq.gz
-docker run -v `pwd`:/data --rm my_bbmap:38.91 in1=$tPE1 in2=$tPE2 out=03_merge/reads_M.fq outu1=03_merge/reads_UM1.fq outu2=03_merge/reads_UM2.fq ihist=ihist_reads.txt
+docker run -v `pwd`:/data --rm my_bbmap:38.91 in1=$tPE1 in2=$tPE2 out=03_merge/reads_M.fq outu1=03_merge/reads_UM1.fq outu2=03_merge/reads_UM2.fq ihist=03_merge/ihist_reads.txt
 gzip -f 03_merge/reads_*.fq
 ### Read quality check with fastqc:v11.9
 mkdir -p 04_fastqc
